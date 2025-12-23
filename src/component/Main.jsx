@@ -1,8 +1,16 @@
+import { useState } from 'react';
 import '../App.css'
 import Crde from './Crde'
 export default function Main() 
 
 {
+    const [dark,setdark]=useState("dark")
+
+    
+    const  handleToggle =()=>{
+    
+        setdark((dark=="dark")?"":"dark");
+    } 
 
     let Media= [
     {
@@ -44,14 +52,18 @@ export default function Main()
     margin={item.margin}
     />})
     return <>
-    <div  className="p-3.5 px-6 bg-bg  min-h-screen dark " >
+    <div  className={"p-3.5 px-6 bg-bg  min-h-screen  "+ dark }>
 <header>
     <h1 className="text-text-primar text-2xl ">Social Media Dashborde</h1>
     <p className="text-text-secondary">Totel Fllowers :22.234</p>
 </header>
 
-<hr className="my-4 mb-9 bg-text-secondary" />
-
+<hr className="my-4 mb-2 bg-text-secondary" />
+<div className="flex  lg:justify-end gap-2 sm:justify-between  mb-7 items-center">
+    <p className="text-text-secondary text-xl font-bold">Dark Mode</p>
+    <button onClick={handleToggle} className='w-12 h-6 bg-toggle rounded-full tog'></button>
+    
+</div>
 <div className="grid sm:grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5 ">
     {rend}
 </div>

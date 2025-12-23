@@ -17,12 +17,7 @@
 
   /* ================= Toggle ================= */
 
-  --color-toggle-light: hsl(230 22% 74%);
-  --color-toggle-dark-from: hsl(210 79% 56%);
-  --color-toggle-dark-to: hsl(146 68% 55%);
-
-  /* ================= Neutral (Semantic) ================= */
-
+  --color-toggle: hsl(230 22% 74%);
   /* Light theme */
   --color-bg: hsl(0 100% 100%);
   --color-bg-top: hsl(225 100% 98%);
@@ -39,4 +34,39 @@
   --color-card:hsl( 228 28% 20%);
   --color-text-primar: hsl(0 100% 100%);
   --color-text-secondary: hsl(230 22% 74%);
+   --color-toggle: hsl(146 68% 55%);
+   .tog::before{
+
+  content: '';
+  display: block;
+  border-radius: 5rem;
+  height: 1.3rem;
+  width: 1.3rem;
+  background-color: hsl(230 17% 14%);;
+  margin-inline: 2px;
+  translate: 1.4rem;
+  
+  
+
+}
+}
+
+.tog::before{
+
+  content: '';
+  display: block;
+  border-radius: 5rem;
+  height: 1.3rem;
+  width: 1.3rem;
+  background-color: hsl(0 100% 100%);
+  margin-inline: 2px;
+  transition-duration: 0.7s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  
+
+}
+
+.tog{
+    cursor: pointer;
+
 }
